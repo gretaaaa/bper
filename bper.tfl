@@ -1,0 +1,35 @@
+<div class="bper">
+    <div class="fluid-container bper-container
+        <#if title.selectColorBackground.getData() == 'white'>
+    	    background-white
+    	<#else>
+    		background-blue
+    	</#if>
+    ">
+        <div class="row">
+        	<div class="col-sx-12 col-md-4 box-title">
+        	    <div class="title-image-background"></div>
+        		<#if (title.getData())?has_content>
+        		    <h1 class="title-text">${title.getData()}</h1>
+        	    </#if>
+        	</div>
+    		    
+        	<div class="col-sx-12 col-md-8 box-description">
+        	    <#if (title.description.getData())?has_content>
+        		    <h3 class="description-text">${title.description.getData()}</h3>
+        		</#if>
+        		<div class="button">
+            	    <#if (title.buttonText.getData())?has_content>
+            		    <a href="
+            		        <#if (title.buttonText.buttonLink.getData())?has_content>
+            		            ${title.buttonText.buttonLink.getData()}
+            		        </#if>
+            		    ">
+            		        ${title.buttonText.getData()}
+            		    </a>
+            		</#if>
+        		</div>
+            </div>
+        </div>
+    </div>
+</div>
